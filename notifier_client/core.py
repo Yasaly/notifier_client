@@ -13,12 +13,12 @@ class NotifierError(Exception):
     pass
 
 
-def message(recipient_id: str, text: str) -> None:
+def message(nickname: str, text: str) -> None:
     """
     Отправить уведомление через удалённый сервер с ботом.
 
     Требует:
-      - NOTIFIER_API_URL      (адрес сервера, например)
+      - NOTIFIER_API_URL      (адрес сервера)
       - NOTIFIER_API_SECRET   (совпадает с серверным NOTIFIER_API_SECRET)
     """
     if not NOTIFIER_API_URL:
@@ -28,7 +28,7 @@ def message(recipient_id: str, text: str) -> None:
 
     payload = {
         "secret": NOTIFIER_API_SECRET,
-        "recipient_id": recipient_id,
+        "nickname": nickname,   # <-- ВАЖНО: nickname
         "text": text,
     }
 
