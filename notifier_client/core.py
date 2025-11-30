@@ -28,7 +28,7 @@ def message(nickname: str, text: str) -> None:
 
     payload = {
         "secret": NOTIFIER_API_SECRET,
-        "nickname": nickname,   # <-- ВАЖНО: nickname
+        "nickname": nickname,
         "text": text,
     }
 
