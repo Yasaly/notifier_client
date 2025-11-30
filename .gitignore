@@ -1,14 +1,15 @@
+# venv
 .venv/
 venv/
 
+# Python cache
 __pycache__/
 *.py[cod]
 
+# env
+.env
+
+# build artefacts
 *.egg-info/
 dist/
 build/
-
-.env
-
-.idea/
-.vscode/
